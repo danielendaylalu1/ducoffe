@@ -68,24 +68,27 @@ function App() {
             <h1>Daniel Endaylalu</h1>
             <h3>Dedicated and Passionate Full-stack Web Developer.</h3>
             <p>
-              As a Full-stack Developer, I possess skills in HTML, Css,
-              JavaScript, React, Redux, Tailwind, Node.js, Express, Mongodb and
-              Sql. I excel in developing, and maintaining responsive websites
-              and web applications that offer a seamless user experience. My
-              expertise lies in crafting dynamic, engaging interfaces through
-              writing clean, optimized code and utilizing cutting-edge
-              full-stack development tools and techniques.
+              As a Full-stack Developer, I possess skills in{" "}
+              <span className="green">Javascript</span>, HTML,{" "}
+              <span className="green">React</span>, Css,{" "}
+              <span className="green">Node.js</span>, Redux, Tailwind, ,
+              <span className="green">Express.js</span>, Sql and{" "}
+              <span className="green">MongoDB</span>. I excel in developing, and
+              maintaining responsive websites and web applications that offer a
+              seamless user experience. My expertise lies in crafting dynamic,
+              engaging interfaces through writing clean, optimized code and
+              utilizing cutting-edge{" "}
+              <span className="green">full-stack development</span> tools and
+              techniques.
               {show && (
                 <p>
-                  I am proficient in both front-end and back-end development,
-                  including database management and server-side programming. I
-                  am also a team player who thrives in collaborating with
-                  cross-functional teams to produce outstanding web
-                  applications. both front-end and back-end development,
-                  including database management and server-side programming. I
-                  am also a team player who thrives in collaborating with
-                  cross-functional teams to produce outstanding web
-                  applications.
+                  I am proficient in both{" "}
+                  <span className="green">front-end</span> and{" "}
+                  <span className="green">back-end</span>
+                  development, including database management and server-side
+                  programming. I am also a team player who thrives in
+                  collaborating with cross-functional teams to produce
+                  outstanding web applications.
                 </p>
               )}
               <span className="about-more" onClick={() => setShow(!show)}>

@@ -9,6 +9,10 @@
 .light {
   background-color: rgb(247, 240, 227);
 }
+.green {
+  color: #0fa147;
+  font-weight: 900;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
