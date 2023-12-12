@@ -3,15 +3,33 @@
   flex-direction: column;
   gap: 80px;
 }
+.icon-2xl {
+  font-size: 35px;
+  /* background-color: #0b1001; */
+}
+.box-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  scrollbar-width: 0 !important;
+  overflow-y: scroll;
+  padding: 40px 30px 15px;
+}
 .dark {
   background-color: rgba(255, 255, 255, 0.08);
 }
 .light {
-  background-color: rgb(247, 240, 227);
+  background-color: rgb(241, 239, 233);
 }
 .green {
   color: #0fa147;
   font-weight: 900;
+}
+.underline {
+  text-decoration: underline;
+}
+.bottom-p {
+  margin-top: 5px;
 }
 .navbar {
   display: flex;
@@ -78,33 +96,41 @@
   grid-column: span 2 / auto;
 }
 .about {
-  padding: 40px 30px 15px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  scrollbar-width: 0 !important;
-  overflow-y: scroll;
 }
-.about::-webkit-scrollbar {
+div::-webkit-scrollbar {
   width: 0;
 }
 .about h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-family: "Silkscreen", sans-serif;
 }
 .about h3 {
-  font-size: 20px;
+  font-size: 18px;
 }
-.about p {
+.about h4,
+p {
   /* text-align: left; */
   font-size: 15px;
-  word-break: break-all;
 }
 .about-more {
   text-decoration: underline;
   color: #0fa147;
   cursor: pointer;
+}
+.skills {
+}
+.skill-item {
+  display: flex;
+  gap: 10px;
+}
+.skill-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.skill-desc p {
+  font-size: 14.5px;
 }
 
 @media only screen and (max-width: 860px) {
@@ -133,6 +159,7 @@
   .nav .active-item {
     border-bottom: 3px solid #0fa147;
     background-color: inherit;
+    /* color: #0e6fee; */
   }
   .nav-items {
     padding: 0;
