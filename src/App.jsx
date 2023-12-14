@@ -29,6 +29,7 @@ import Skill from "./components/Skill";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import About from "./components/About";
+import Work from "./components/Work";
 
 function App() {
   const items = ["All", "About", "Skills", "Projects", "Contact"];
@@ -95,7 +96,11 @@ function App() {
             ]}
           />
 
-          <div className={`item item-wide ${checked ? "dark" : "light-frt"}`}>
+          <div
+            className={`item item-wide ${checked ? "dark" : "light-frt"} ${
+              !(active === "All") && "hide"
+            }`}
+          >
             5
           </div>
           <Social checked={checked} image={linkedin} active={active} />
@@ -153,9 +158,24 @@ function App() {
             ]}
           />
 
-          <div className={`item item-wide ${checked ? "dark" : "light-frt"}`}>
-            13
-          </div>
+          <Work
+            icons={[
+              { name: <FaHtml5 />, color: "#e67c19" },
+              { name: <FaCss3Alt />, color: "#2d6fe1" },
+
+              { name: <FaReact />, color: "#36d3f2" },
+              { name: <SiRedux />, color: "#a30696" },
+            ]}
+            checked={checked}
+            active={active}
+            name="EHPSA(Ethiopian Health Profession Student Association)"
+            desc="I am proud to have contributed to EHPSA's mission during my internship, leveraging my skills including
+            React and Redux, to design and implement robust user interfaces, ensuring a seamless and engaging
+            user experience. Collaborated closely with cross-functional teams to integrate the front-end with the
+            back-end systems, optimizing overall system performance. This experience has not only honed my
+            technical abilities but has also instilled in me a commitment to delivering high-quality solutions within
+            a collaborative team environment."
+          />
         </div>
       </div>
     </ThemeProvider>

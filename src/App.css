@@ -21,7 +21,7 @@
   gap: 15px;
   scrollbar-width: 0 !important;
   overflow-y: scroll;
-  padding: 40px 30px 15px;
+  padding: 40px 25px 15px;
 }
 .dark {
   background-color: rgba(255, 255, 255, 0.08);
@@ -101,13 +101,14 @@
 .container {
   display: grid;
   /* grid-template-rows: minmax(200px, auto); */
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-auto-rows: 200px;
   gap: 2rem;
   padding: 20px 40px;
 }
 .item {
   border-radius: 30px;
+  /* align-self: center; */
 }
 .item-tall {
   grid-row: span 2 / auto;
