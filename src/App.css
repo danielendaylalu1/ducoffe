@@ -5,12 +5,17 @@
 }
 .icon-2xl {
   font-size: 35px;
-  /* background-color: #0b1001; */
+}
+.icon-xl {
+  font-size: 26px;
+}
+.icon-sm {
+  font-size: 22px;
 }
 .box-column {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   scrollbar-width: 0 !important;
   overflow-y: scroll;
   padding: 40px 30px 15px;
@@ -18,8 +23,15 @@
 .dark {
   background-color: rgba(255, 255, 255, 0.08);
 }
+
 .light {
-  background-color: rgb(241, 239, 233);
+  background-color: rgb(194, 252, 246);
+}
+.light-trd {
+  background-color: rgb(250, 221, 205);
+}
+.light-snd {
+  background-color: rgb(253, 234, 176);
 }
 .green {
   color: #0fa147;
@@ -118,8 +130,6 @@ p {
   color: #0fa147;
   cursor: pointer;
 }
-.skills {
-}
 .skill-item {
   display: flex;
   gap: 10px;
@@ -157,6 +167,46 @@ p {
   height: 100%;
   object-fit: cover;
 }
+/* .project-img {
+  min-height: 200px;
+  width: 100%;
+} */
+
+.project h3 {
+  font-size: 14px;
+}
+.project img {
+  /* width: 100%; */
+  min-height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.project-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.project-skills-icons {
+  display: flex;
+  gap: 5px;
+}
+.project-more {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* align-items: center; */
+}
+.project-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-about .btn {
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 20px;
+}
 
 @media only screen and (max-width: 860px) {
   .navbar {
@@ -184,7 +234,7 @@ p {
   .nav .active-item {
     border-bottom: 3px solid #0fa147;
     background-color: inherit;
-    /* color: #0e6fee; */
+    /* color: #a30696; */
   }
   .nav-items {
     padding: 0;

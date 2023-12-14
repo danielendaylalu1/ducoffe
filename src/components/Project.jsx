@@ -1,15 +1,54 @@
-const Project = () => {
+/* eslint-disable react/prop-types */
+import { IconContext } from "react-icons";
+
+const Project = ({ checked, name, image, links, icons }) => {
   return (
-    <div className={`item item-tall box-column ${checked ? "dark" : "light"}`}>
+    <div
+      className={`item item-tall item-wide box-column project ${
+        checked ? "dark" : "light-snd"
+      }`}
+    >
       <h3>Project</h3>
-      <h1>Weshare</h1>
+      <h1>{name}</h1>
+
       <div className="project-skills">
-        <p>Built with</p>
+        <h3>Built with</h3>
+        <div className="project-skills-icons">
+          {icons.map((icon, index) => {
+            return (
+              <IconContext.Provider
+                key={index}
+                value={{ color: icon.color, className: "icon-xl" }}
+              >
+                {icon.name}
+              </IconContext.Provider>
+            );
+          })}
+        </div>
       </div>
-      <img src="" />
+      {/* <div className="project-img"> */}
+      <img src={image} />
+      {/* </div> */}
+
       <div className="project-more">
-        <div className="project-links"></div>
-        <div className="project-about"></div>
+        <div className="project-links">
+          {links.map((link) => {
+            return (
+              <div className="project-link" key={link.name}>
+                <a href="#">
+                  <IconContext.Provider
+                    value={{ color: link.color, className: "icon-sm" }}
+                  >
+                    {link.icon}
+                  </IconContext.Provider>
+                </a>
+              </div>
+            );
+          })}
+        </div>
+        <div className={`project-about `}>
+          <p className={`btn dark2`}>About Project</p>
+        </div>
       </div>
     </div>
   );
