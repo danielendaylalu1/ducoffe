@@ -8,7 +8,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import { FaGithub } from "react-icons/fa";
 import { CiLink } from "react-icons/ci";
-import { FaCss3Alt, FaHtml5, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+// FaCss3Alt, FaHtml5, FaJs,
+import { FaCss3Alt, FaHtml5, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
 
 import { SiRedux } from "react-icons/si";
@@ -19,15 +20,18 @@ import linkedin from "../src/assets/images/linkedin.jpg";
 import gmail from "../src/assets/images/gmail.jpg";
 import github from "../src/assets/images/github.jpg";
 import weshareImg from "../src/assets/images/weshareimg.png";
+import shoeImg from "../src/assets/images/shoeImg.png";
 
 //components
 import Social from "./components/Social";
 import Project from "./components/Project";
 import Skill from "./components/Skill";
 import NavBar from "./components/NavBar";
+import Header from "./components/Header";
+import About from "./components/About";
 
 function App() {
-  const items = ["All", "About", "Projects", "Contact"];
+  const items = ["All", "About", "Skills", "Projects", "Contact"];
   const [active, setActive] = useState("All");
   const [checked, setChecked] = useState(false);
   const [show, setShow] = useState(false);
@@ -55,76 +59,101 @@ function App() {
           active={active}
           checked={checked}
         />
-        <div className="header">
-          <h1>
-            <span>Full-Stack</span> Web Developer
-          </h1>
-        </div>
+        <Header />
         <div className="container">
-          <div
-            className={`item item-wide item-tall about box-column ${
-              checked ? "dark" : "light"
-            }`}
-          >
-            <h1>Daniel Endaylalu</h1>
-            <h3>Dedicated and Passionate Full-stack Web Developer.</h3>
-            <h4>
-              As a Full-stack Developer, I possess skills in{" "}
-              <span className="underline">Javascript</span>, HTML, Css,{" "}
-              <span className="underline">React</span>, Redux,{" "}
-              <span className="underline">Node.js</span>, Tailwind, ,
-              <span className="underline">Express.js</span>, Sql and{" "}
-              <span className="underline">MongoDB</span>. I excel in developing,
-              and maintaining responsive websites and web applications that
-              offer a seamless user experience.
-              {show && (
-                <p className="bottom-p">
-                  My expertise lies in crafting dynamic, engaging interfaces
-                  through writing clean, optimized code and utilizing
-                  cutting-edge{" "}
-                  <span className="underline">full-stack development</span>{" "}
-                  tools and techniques. I am proficient in both{" "}
-                  <span className="underline">front-end</span> and{" "}
-                  <span className="underline">back-end</span> development,
-                  including database management and server-side programming. I
-                  am also a team player who thrives in collaborating with
-                  cross-functional teams to produce outstanding web
-                  applications.
-                </p>
-              )}
-              <span className="about-more" onClick={() => setShow(!show)}>
-                {show ? "Hide" : "More"}
-              </span>
-            </h4>
-          </div>
-          <Social checked={checked} image={github} />
-          <Skill checked={checked} />
+          <About
+            setShow={setShow}
+            show={show}
+            checked={checked}
+            active={active}
+          />
+          <Social checked={checked} image={github} active={active} />
+          <Skill checked={checked} active={active} />
           <Project
             icons={[
               { name: <FaReact />, color: "#36d3f2" },
+              { name: <SiRedux />, color: "#a30696" },
+              { name: <FaNodeJs />, color: "#2bb110" },
               { name: <SiExpress />, color: "#000" },
+              { name: <SiMongodb />, color: "#2bb110" },
             ]}
             checked={checked}
+            active={active}
             name="Weshare"
             image={weshareImg}
             links={[
-              { icon: <FaGithub />, color: "#000" },
-              { icon: <CiLink />, color: "#000" },
+              {
+                icon: <FaGithub />,
+                color: "#000",
+                link: "https://github.com/danielendaylalu1/weShare",
+              },
+              {
+                icon: <CiLink />,
+                color: "#0219e0",
+                link: "https://weshare-0u15.onrender.com",
+              },
             ]}
           />
-          <div className={`item item-wide ${checked ? "dark" : "light"}`}>
+
+          <div className={`item item-wide ${checked ? "dark" : "light-frt"}`}>
             5
           </div>
-          <Social checked={checked} image={linkedin} />
-          <div className={`item item-tall ${checked ? "dark" : "light"}`}>
-            9
-          </div>
-          <Social checked={checked} image={telegram} />
-          <Social checked={checked} image={gmail} />
-          <div className={`item item-tall ${checked ? "dark" : "light"}`}>
-            12
-          </div>
-          <div className={`item item-wide ${checked ? "dark" : "light"}`}>
+          <Social checked={checked} image={linkedin} active={active} />
+          <Project
+            icons={[
+              { name: <FaHtml5 />, color: "#e67c19" },
+              { name: <FaCss3Alt />, color: "#2d6fe1" },
+
+              { name: <FaReact />, color: "#36d3f2" },
+              { name: <SiRedux />, color: "#a30696" },
+            ]}
+            checked={checked}
+            active={active}
+            name="chamaStore"
+            image={shoeImg}
+            links={[
+              {
+                icon: <FaGithub />,
+                color: "#000",
+                link: "https://github.com/danielendaylalu1/chamaStore",
+              },
+              {
+                icon: <CiLink />,
+                color: "#0219e0",
+                link: "https://chamastore.onrender.com/",
+              },
+            ]}
+          />
+
+          <Social checked={checked} image={telegram} active={active} />
+          <Social checked={checked} image={gmail} active={active} />
+          <Project
+            icons={[
+              { name: <FaHtml5 />, color: "#e67c19" },
+              { name: <FaCss3Alt />, color: "#2d6fe1" },
+
+              { name: <FaReact />, color: "#36d3f2" },
+              { name: <SiRedux />, color: "#a30696" },
+            ]}
+            checked={checked}
+            active={active}
+            name="chamaStore"
+            image={shoeImg}
+            links={[
+              {
+                icon: <FaGithub />,
+                color: "#000",
+                link: "https://github.com/danielendaylalu1/chamaStore",
+              },
+              {
+                icon: <CiLink />,
+                color: "#0219e0",
+                link: "https://chamastore.onrender.com/",
+              },
+            ]}
+          />
+
+          <div className={`item item-wide ${checked ? "dark" : "light-frt"}`}>
             13
           </div>
         </div>

@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import { IconContext } from "react-icons";
 
-const Project = ({ checked, name, image, links, icons }) => {
+const Project = ({ checked, name, image, links, icons, active }) => {
   return (
     <div
-      className={`item item-tall item-wide box-column project ${
+      className={`item item-tall box-column project ${
         checked ? "dark" : "light-snd"
-      }`}
+      } ${!(active === "All" || active === "Projects") && "hide"}`}
     >
       <h3>Project</h3>
       <h1>{name}</h1>
@@ -26,16 +26,15 @@ const Project = ({ checked, name, image, links, icons }) => {
           })}
         </div>
       </div>
-      {/* <div className="project-img"> */}
+
       <img src={image} />
-      {/* </div> */}
 
       <div className="project-more">
         <div className="project-links">
           {links.map((link) => {
             return (
               <div className="project-link" key={link.name}>
-                <a href="#">
+                <a href={link.link}>
                   <IconContext.Provider
                     value={{ color: link.color, className: "icon-sm" }}
                   >

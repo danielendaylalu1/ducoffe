@@ -5,12 +5,12 @@ import { SiRedux } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaCss3Alt, FaHtml5, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import SkillItem from "./SkillItem";
-const Skill = ({ checked }) => {
+const Skill = ({ checked, active }) => {
   return (
     <div
       className={`item item-tall skills box-column ${
         checked ? "dark" : "light-trd "
-      }`}
+      } ${!(active === "All" || active === "Skills") && "hide"}`}
     >
       <h1>Skills</h1>
       <SkillItem

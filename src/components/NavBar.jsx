@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import MaterialUISwitch from "./components/Swith";
+import MaterialUISwitch from "./Swith";
 const NavBar = ({ items, active, setActive, checked, handleChange }) => {
   return (
     <div className="navbar">
@@ -14,7 +14,10 @@ const NavBar = ({ items, active, setActive, checked, handleChange }) => {
             <p
               key={item}
               className={`nav-items ${active === item && "active-item"}`}
-              onClick={() => setActive(item)}
+              onClick={() => {
+                setActive(item);
+                console.log(active);
+              }}
             >
               {item}
             </p>
