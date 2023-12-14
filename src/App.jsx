@@ -11,6 +11,13 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { FaCss3Alt, FaHtml5, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import SkillItem from "./components/SkillItem";
 
+//images
+import telegram from "../src/assets/images/telegram.jpg";
+import linkedin from "../src/assets/images/linkedin.jpg";
+import gmail from "../src/assets/images/gmail.jpg";
+import github from "../src/assets/images/github.jpg";
+import Social from "./components/Social";
+
 function App() {
   const items = ["All", "About", "Projects", "Contact"];
   const [active, setActive] = useState("All");
@@ -102,7 +109,7 @@ function App() {
               </span>
             </h4>
           </div>
-          <div className="item">2</div>
+          <Social checked={checked} image={github} />
           <div
             className={`item item-tall skills box-column ${
               checked ? "dark" : "light"
@@ -138,18 +145,37 @@ function App() {
               desc="Relational and Non-relational Database management."
             />
           </div>
-          <div className="item item-tall">4</div>
-          <div className="item item-wide">5</div>
-          <div className="item">6</div>
-          <div className="item item-wide">7</div>
-          <div className="item item-wide">8</div>
-          <div className="item item-tall">9</div>
-          <div className="item item-tall">10</div>
-          <div className="item">11</div>
-          <div className="item">12</div>
-          <div className="item">13</div>
-          <div className="item item-wide">14</div>
-          <div className="item">15</div>
+          <div
+            className={`item item-tall box-column ${
+              checked ? "dark" : "light"
+            }`}
+          >
+            <h3>Project</h3>
+            <h1>Weshare</h1>
+            <div className="project-skills">
+              <p>Built with</p>
+            </div>
+            <img src="" />
+            <div className="project-more">
+              <div className="project-links"></div>
+              <div className="project-about"></div>
+            </div>
+          </div>
+          <div className={`item item-wide ${checked ? "dark" : "light"}`}>
+            5
+          </div>
+          <Social checked={checked} image={linkedin} />
+          <div className={`item item-tall ${checked ? "dark" : "light"}`}>
+            9
+          </div>
+          <Social checked={checked} image={telegram} />
+          <Social checked={checked} image={gmail} />
+          <div className={`item item-tall ${checked ? "dark" : "light"}`}>
+            12
+          </div>
+          <div className={`item item-wide ${checked ? "dark" : "light"}`}>
+            13
+          </div>
         </div>
       </div>
     </ThemeProvider>

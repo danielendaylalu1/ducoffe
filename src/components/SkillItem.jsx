@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconContext } from "react-icons";
 
 const SkillItem = ({ icons, desc }) => {
@@ -8,12 +8,6 @@ const SkillItem = ({ icons, desc }) => {
       <div className="skill-icons">
         {icons.map((icon, index) => {
           return (
-            // <FontAwesomeIcon
-            //   key={index}
-            //   icon={icon.name}
-            //   size="2xl"
-            //   style={{ color: icon.color }}
-            // />
             <IconContext.Provider
               key={index}
               value={{ color: icon.color, className: "icon-2xl" }}
