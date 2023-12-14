@@ -8,6 +8,7 @@ import SkillItem from "./SkillItem";
 const Skill = ({ checked, active }) => {
   return (
     <div
+      id="Skills"
       className={`item item-tall skills box-column ${
         checked ? "dark" : "light-trd "
       } ${!(active === "All" || active === "Skills") && "hide"}`}

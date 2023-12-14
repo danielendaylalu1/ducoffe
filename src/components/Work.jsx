@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 const Work = ({ active, checked, name, icons, desc }) => {
   return (
     <div
-      className={`item item-wide box-column project ${
+      className={`item item-wide box-column project work ${
         checked ? "dark" : "light-frt"
       } ${!(active === "All") && "hide"}`}
     >

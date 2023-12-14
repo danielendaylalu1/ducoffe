@@ -34,7 +34,7 @@ import Work from "./components/Work";
 function App() {
   const items = ["All", "About", "Skills", "Projects", "Contact"];
   const [active, setActive] = useState("All");
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   const [show, setShow] = useState(false);
 
   const handleChange = (event) => {
@@ -61,6 +61,7 @@ function App() {
           checked={checked}
         />
         <Header />
+
         <div className="container">
           <About
             setShow={setShow}
@@ -95,14 +96,25 @@ function App() {
               },
             ]}
           />
+          <Work
+            icons={[
+              { name: <FaHtml5 />, color: "#e67c19" },
+              { name: <FaCss3Alt />, color: "#2d6fe1" },
 
-          <div
-            className={`item item-wide ${checked ? "dark" : "light-frt"} ${
-              !(active === "All") && "hide"
-            }`}
-          >
-            5
-          </div>
+              { name: <FaReact />, color: "#36d3f2" },
+              { name: <SiRedux />, color: "#a30696" },
+            ]}
+            checked={checked}
+            active={active}
+            name="EHPSA(Ethiopian Health Profession Student Association)"
+            desc="I am proud to have contributed to EHPSA's mission during my internship, leveraging my skills including
+            React and Redux, to design and implement robust user interfaces, ensuring a seamless and engaging
+            user experience. Collaborated closely with cross-functional teams to integrate the front-end with the
+            back-end systems, optimizing overall system performance. This experience has not only honed my
+            technical abilities but has also instilled in me a commitment to delivering high-quality solutions within
+            a collaborative team environment."
+          />
+
           <Social checked={checked} image={linkedin} active={active} />
           <Project
             icons={[
@@ -164,17 +176,19 @@ function App() {
               { name: <FaCss3Alt />, color: "#2d6fe1" },
 
               { name: <FaReact />, color: "#36d3f2" },
-              { name: <SiRedux />, color: "#a30696" },
             ]}
             checked={checked}
             active={active}
-            name="EHPSA(Ethiopian Health Profession Student Association)"
-            desc="I am proud to have contributed to EHPSA's mission during my internship, leveraging my skills including
-            React and Redux, to design and implement robust user interfaces, ensuring a seamless and engaging
-            user experience. Collaborated closely with cross-functional teams to integrate the front-end with the
-            back-end systems, optimizing overall system performance. This experience has not only honed my
-            technical abilities but has also instilled in me a commitment to delivering high-quality solutions within
-            a collaborative team environment."
+            name="SYNC INTERN'S"
+            desc="It's my pleasure to provide this letter of recommendation to Mr./Miss Daniel Endaylalu who has
+            successfully completed one month internship (from 15th July 2023 to 15th August 2023) in the
+            ﬁeld of React Js with us. During this period,
+            We found them as a hard-working and a punctual person as they completed all the assigned tasks
+            well and on time. Their obedience and perseverance are commendable, we were privileged to
+            have them as our teammate. They have been an asset to the company. Their conduct and
+            performance on the job have been excellent.
+            In a nutshell, I'd like to reiterate strong support to them for being a sincere and diligent
+            participant. I would highly recommend Mr./Miss Daniel Endaylalu for prospective opportunities."
           />
         </div>
       </div>

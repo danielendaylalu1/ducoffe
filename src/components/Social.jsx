@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
-const Social = ({ checked, image, link, active }) => {
+const Social = ({ image, link, active }) => {
   return (
     <div
-      className={`item social ${checked ? "dark" : "light"} ${
+      id="Contact"
+      className={`item social  ${
         !(active === "All" || active === "Contact") && "hide"
       }`}
     >
@@ -15,6 +16,7 @@ const Social = ({ checked, image, link, active }) => {
           className="icon"
         />
       </a>
+
       <img src={image} />
     </div>
   );

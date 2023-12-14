@@ -25,6 +25,7 @@ p {
   background-color: #8d8c8c;
   border-radius: 5px;
 }
+
 @media only screen and (max-width: 500px) {
   body {
     padding: 0 5px;
