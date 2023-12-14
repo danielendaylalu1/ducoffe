@@ -5,6 +5,7 @@
 }
 .hide {
   opacity: 0.1 !important;
+  pointer-events: none;
 }
 .icon-2xl {
   font-size: 35px;
@@ -104,6 +105,7 @@
   grid-auto-rows: 200px;
   gap: 2rem;
   padding: 20px 40px;
+  /* place-items: center; */
 }
 .item {
   max-width: 650px;

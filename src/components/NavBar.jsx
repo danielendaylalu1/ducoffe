@@ -11,7 +11,8 @@ const NavBar = ({ items, active, setActive, checked, handleChange }) => {
       <div className="nav">
         {items.map((item) => {
           return (
-            <p
+            <a
+              href={`#${item}`}
               key={item}
               className={`nav-items ${active === item && "active-item"}`}
               onClick={() => {
@@ -20,7 +21,7 @@ const NavBar = ({ items, active, setActive, checked, handleChange }) => {
               }}
             >
               {item}
-            </p>
+            </a>
           );
         })}
       </div>

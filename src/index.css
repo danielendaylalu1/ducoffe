@@ -17,6 +17,9 @@ h4,
 p {
   font-family: "Source Code Pro", monospace;
 }
+a {
+  text-decoration: none;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }
