@@ -4,8 +4,9 @@
   gap: 80px;
 }
 .hide {
-  opacity: 0.1 !important;
-  pointer-events: none;
+  /* opacity: 0.1 !important;
+  pointer-events: none; */
+  display: none !important;
 }
 .icon-2xl {
   font-size: 35px;
@@ -185,17 +186,11 @@ p {
   min-height: 100%;
   object-fit: cover;
 }
-/* .project-img {
-  min-height: 200px;
-  width: 100%;
-} */
-.project {
-}
+
 .project h3 {
   font-size: 14px;
 }
 .project img {
-  /* width: 100%; */
   min-height: 250px;
   object-fit: cover;
   border-radius: 20px;
@@ -213,7 +208,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* align-items: center; */
 }
 .project-links {
   display: flex;

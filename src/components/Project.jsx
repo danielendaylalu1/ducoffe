@@ -35,7 +35,7 @@ const Project = ({ checked, name, image, links, icons, active }) => {
           {links.map((link, index) => {
             return (
               <div className="project-link" key={index}>
-                <a href={link.link}>
+                <a href={link.link} target="_blank" rel="noreferrer">
                   <IconContext.Provider
                     value={{ color: link.color, className: "icon-sm" }}
                   >
