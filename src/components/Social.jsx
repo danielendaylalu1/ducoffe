@@ -9,7 +9,11 @@ const Social = ({ image, link, active }) => {
         !(active === "All" || active === "Contact") && "hide"
       }`}
     >
-      <a href={link} target="_blank" rel="noreferrer">
+      <a
+        href={link && link.includes("gmail") ? `mailto:${link}` : link}
+        target="_blank"
+        rel="noreferrer"
+      >
         <FontAwesomeIcon
           icon={faArrowRightLong}
           style={{ color: "#ffffff" }}

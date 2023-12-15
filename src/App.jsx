@@ -152,8 +152,18 @@ function App() {
             ]}
           />
 
-          <Social checked={checked} image={telegram} active={active} />
-          <Social checked={checked} image={gmail} active={active} />
+          <Social
+            checked={checked}
+            image={telegram}
+            active={active}
+            link="https://t.me/Daylalu"
+          />
+          <Social
+            checked={checked}
+            image={gmail}
+            active={active}
+            link="endaylaludaniel@gmail.com"
+          />
           <Project
             icons={[
               { name: <FaHtml5 />, color: "#e67c19" },

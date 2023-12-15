@@ -32,9 +32,9 @@ const Project = ({ checked, name, image, links, icons, active }) => {
 
       <div className="project-more">
         <div className="project-links">
-          {links.map((link) => {
+          {links.map((link, index) => {
             return (
-              <div className="project-link" key={link.name}>
+              <div className="project-link" key={index}>
                 <a href={link.link}>
                   <IconContext.Provider
                     value={{ color: link.color, className: "icon-sm" }}
