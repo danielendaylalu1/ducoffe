@@ -9,7 +9,7 @@ const Social = ({ image, link, active }) => {
         !(active === "All" || active === "Contact") && "hide"
       }`}
     >
-      <a href={link}>
+      <a href={link} target="_blank" rel="noreferrer">
         <FontAwesomeIcon
           icon={faArrowRightLong}
           style={{ color: "#ffffff" }}

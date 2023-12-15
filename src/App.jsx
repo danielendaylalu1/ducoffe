@@ -69,7 +69,12 @@ function App() {
             checked={checked}
             active={active}
           />
-          <Social checked={checked} image={github} active={active} />
+          <Social
+            checked={checked}
+            image={github}
+            active={active}
+            link="https://github.com/danielendaylalu1/"
+          />
           <Skill checked={checked} active={active} />
           <Project
             icons={[
@@ -115,7 +120,12 @@ function App() {
             a collaborative team environment."
           />
 
-          <Social checked={checked} image={linkedin} active={active} />
+          <Social
+            checked={checked}
+            image={linkedin}
+            active={active}
+            link="https://www.linkedin.com/in/daniel-endaylalu-43b92326a/"
+          />
           <Project
             icons={[
               { name: <FaHtml5 />, color: "#e67c19" },
