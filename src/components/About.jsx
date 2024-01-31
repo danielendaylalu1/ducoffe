@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const About = ({ checked, show, setShow, active }) => {
+const About = ({ checked, active }) => {
   return (
     <div
       className={`item item-wide item-tall about box-column ${
@@ -7,7 +7,23 @@ const About = ({ checked, show, setShow, active }) => {
       } ${!(active === "All" || active === "About") && "hide"}`}
     >
       <h1>Daniel Endaylalu</h1>
-      <h3>Dedicated and Passionate Full-stack Web Developer.</h3>
+      <h3>
+        I am an experienced Front end Developer with a proven track record in
+        developing high-quality websites and web applications. My expertise lies
+        in developing attractive , dynamic and functional website using the
+        latest web frameworks and libraries.
+      </h3>
+      <h3>
+        I possess in-depth knowledge of popular front end frameworks and
+        libraries such as ✅React, ✅Next.js and ✅svelte.
+      </h3>
+      <h3>
+        My projects involve seamless API integration for enhanced
+        functionalities, pixel perfect design conversion, clean and optimize
+        written codes.I adhere to Agile methodologies, ensuring an adaptive,
+        flexible, and result-oriented approach in every project I undertake.
+      </h3>
+      {/* <h3>Dedicated and Passionate Full-stack Web Developer.</h3>
       <h4>
         As a Full-stack Developer, I possess skills in{" "}
         <span className="underline">Javascript</span>, HTML, Css,{" "}
@@ -33,7 +49,7 @@ const About = ({ checked, show, setShow, active }) => {
         <span className="about-more" onClick={() => setShow(!show)}>
           {show ? "Hide" : "More"}
         </span>
-      </h4>
+      </h4> */}
     </div>
   );
 };
