@@ -135,8 +135,8 @@ function App() {
               { name: <FaReact />, color: "#36d3f2" },
               { name: <SiRedux />, color: "#a30696" },
               { name: <FaNodeJs />, color: "#36d3f2" },
-              { name: <SiExpress />, color: "#a30696" },
-              { name: <SiMongodb />, color: "#a30696" },
+              { name: <SiExpress />, color: "#fffff" },
+              { name: <SiMongodb />, color: "#2bb110" },
             ]}
             checked={checked}
             active={active}
