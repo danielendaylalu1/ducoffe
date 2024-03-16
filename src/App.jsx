@@ -21,6 +21,7 @@ import gmail from "../src/assets/images/gmail.jpg";
 import github from "../src/assets/images/github.jpg";
 import weshareImg from "../src/assets/images/weshareimg.png";
 import shoeImg from "../src/assets/images/shoeImg.png";
+import MusicExplore from "../src/assets/images/music-explore.png";
 
 //components
 import Social from "./components/Social";
@@ -133,21 +134,24 @@ function App() {
 
               { name: <FaReact />, color: "#36d3f2" },
               { name: <SiRedux />, color: "#a30696" },
+              { name: <FaNodeJs />, color: "#36d3f2" },
+              { name: <SiExpress />, color: "#a30696" },
+              { name: <SiMongodb />, color: "#a30696" },
             ]}
             checked={checked}
             active={active}
-            name="chamaStore"
-            image={shoeImg}
+            name="Music Explore"
+            image={MusicExplore}
             links={[
               {
                 icon: <FaGithub />,
                 color: "#000",
-                link: "https://github.com/danielendaylalu1/chamaStore",
+                link: "https://github.com/danielendaylalu1/MusicExplore",
               },
               {
                 icon: <CiLink />,
                 color: "#0219e0",
-                link: "https://chamastore.onrender.com/",
+                link: "https://music-explore-eight.vercel.app/",
               },
             ]}
           />
@@ -158,6 +162,7 @@ function App() {
             active={active}
             link="https://t.me/Daylalu"
           />
+
           <Social
             checked={checked}
             image={gmail}

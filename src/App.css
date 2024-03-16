@@ -191,8 +191,8 @@ p {
   font-size: 14px;
 }
 .project img {
-  min-height: 250px;
-  object-fit: cover;
+  min-height: 150px;
+  object-fit: contain;
   border-radius: 20px;
 }
 .project-skills {
